@@ -1,0 +1,18 @@
+<div class="details-container" *ngIf="student; else notFound">
+  <h2>Student Profile: {{ student.firstName }} {{ student.lastName }}</h2>
+  <hr>
+  <div class="info-grid">
+    <p><strong>ID:</strong> {{ student.id }}</p>
+    <p><strong>Age:</strong> {{ student.age }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Department:</strong> {{ student.department }}</p>
+    <p><strong>GPA:</strong> {{ student.GPA }}</p>
+    <p><strong>Enrolled:</strong> {{ student.enrollmentDate }}</p>
+    <p><strong>Status:</strong> {{ student.isActive ? 'Active' : 'Inactive' }}</p>
+  </div>
+  <button routerLink="/students" class="btn-back">Return to List</button>
+</div>
+
+<ng-template #notFound>
+  <div class="error">Student not found.</div>
+</ng-template>

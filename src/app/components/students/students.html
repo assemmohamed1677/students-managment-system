@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Students Directory</h2>
+  
+  <!-- This tag MUST match the selector in student-table.ts -->
+  <app-student-table 
+    [studentList]="(students$ | async) || []" 
+    (deleteRequest)="handleDelete($event)">
+  </app-student-table>
+</div>

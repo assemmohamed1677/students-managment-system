@@ -1,0 +1,35 @@
+<div class="table-responsive">
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>GPA</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Modern Angular @for loop -->
+      @for (s of studentList; track s.id) {
+        <tr>
+          <td>{{ s.id }}</td>
+          <td>{{ s.firstName }} {{ s.lastName }}</td>
+          <td>{{ s.age }}</td>
+          <td>{{ s.department }}</td>
+          <td>{{ s.GPA }}</td>
+          <td>
+            <button [routerLink]="['/student', s.id]" class="btn-view">View</button>
+            <button (click)="onDelete(s.id)" class="btn-delete">Delete</button>
+          </td>
+        </tr>
+      } @empty {
+        <!-- This replaces the need for a separate @if for empty lists -->
+        <tr>
+          <td colspan="6" style="text-align: center;">No students found.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

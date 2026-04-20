@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Add Student</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    
+    <input type="text" formControlName="firstName" placeholder="First Name">
+    <input type="text" formControlName="lastName" placeholder="Last Name">
+    <input type="number" formControlName="age" placeholder="Age">
+    <input type="email" formControlName="email" placeholder="Email">
+    
+    <select formControlName="department">
+      <option value="">Select Department</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Engineering">Engineering</option>
+    </select>
+    
+    <input type="number" step="0.1" formControlName="gpa" placeholder="GPA">
+
+    <!-- REMOVE [disabled]="studentForm.invalid" temporarily to test -->
+    <button type="submit">Save Student</button>
+  </form>
+</div>

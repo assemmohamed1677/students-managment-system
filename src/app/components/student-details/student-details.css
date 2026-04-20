@@ -1,0 +1,19 @@
+.details-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+.info-grid p {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.btn-back {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #7f8c8d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
